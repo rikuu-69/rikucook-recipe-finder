@@ -86,7 +86,6 @@ Format your response as JSON only, no markdown or preamble:
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-red-50">
       <div className="max-w-4xl mx-auto p-6 pt-12">
-        {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
             <ChefHat className="w-12 h-12 text-orange-600" />
@@ -97,7 +96,6 @@ Format your response as JSON only, no markdown or preamble:
           <p className="text-xl text-gray-600">What's in your fridge?</p>
         </div>
 
-        {/* Input Section */}
         <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">Add Your Ingredients</h2>
           
@@ -119,7 +117,6 @@ Format your response as JSON only, no markdown or preamble:
             </button>
           </div>
 
-          {/* Ingredient Tags */}
           {ingredients.length > 0 && (
             <div className="flex flex-wrap gap-2 mb-6">
               {ingredients.map((ing, idx) => (
@@ -139,7 +136,6 @@ Format your response as JSON only, no markdown or preamble:
             </div>
           )}
 
-          {/* Find Recipes Button */}
           <button
             onClick={findRecipes}
             disabled={loading || ingredients.length === 0}
@@ -163,7 +159,6 @@ Format your response as JSON only, no markdown or preamble:
           )}
         </div>
 
-        {/* Recipes Display */}
         {recipes.length > 0 && (
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">Your Recipes</h2>
@@ -202,37 +197,3 @@ Format your response as JSON only, no markdown or preamble:
     </div>
   );
 }
-```
-
-4. **Commit changes**
-
-## Step 3: Deploy to Vercel (Free & Easy!)
-
-Now let's deploy your app to the web for FREE:
-
-1. **Go to https://vercel.com**
-2. Click **"Sign Up"** and choose **"Continue with GitHub"**
-3. After connecting, click **"Add New..."** → **"Project"**
-4. Find your `rikucook-recipe-finder` repository and click **"Import"**
-5. Vercel will auto-detect it's a Vite project. Just click **"Deploy"**
-6. Wait 1-2 minutes... ⏳
-7. **BOOM!** 🎉 Your app is live!
-
-You'll get a URL like: `https://rikucook-recipe-finder.vercel.app`
-
----
-
-## Your Files Should Look Like This:
-```
-rikucook-recipe-finder/
-├── src/
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-├── index.html
-├── package.json
-├── vite.config.js
-├── tailwind.config.js
-├── postcss.config.js
-├── .gitignore
-└── README.md
